@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Employee]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[FirstName] VARCHAR(255) NOT NULL,
+	[LastName] VARCHAR(255) NOT NULL,
+	[DepartmentId] INT NULL FOREIGN KEY REFERENCES Department(Id),
+	[ContractId] INT NULL FOREIGN KEY REFERENCES [Contract](Id),
+)
+GO
